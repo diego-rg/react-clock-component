@@ -1,15 +1,13 @@
-import { useState, useEffect } from "react";
+import LocalDate from "./Date";
+import LocalTime from "./Time";
 
 const Clock = () => {
-  const [time, setTime] = useState(new Date().toLocaleTimeString());
-
-  useEffect(() => {
-    setInterval(() => {
-      setTime(new Date().toLocaleTimeString());
-    }, 1000);
-  });
-
-  return <div>{time}</div>;
+  return (
+    <div>
+      <LocalDate />
+      <LocalTime />
+    </div>
+  );
 };
 
 export default Clock;
